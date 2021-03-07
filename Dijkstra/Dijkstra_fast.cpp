@@ -25,7 +25,8 @@ void dijkstra(int start ) {
         if(dist < d[now]) continue;
 
         for(int i =0 ; i < graph[now].size() ; i++ ) {
-            int cost = dist + graph[now][i].second;
+            int cost = dist + graph[now][i].first;
+
             if(cost < d[graph[now][i].first] ) {
                 d[graph[now][i].first] = cost;
                 // 기본적으로 최대힙이기에 -를 붙여서 최소힙으로 움직일 수 있게힘
