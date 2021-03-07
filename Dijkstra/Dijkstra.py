@@ -28,7 +28,7 @@ def get_smallest_node() :
 
 def djkstra() :
     distance[start] = 0
-    visited[start] = 0
+    visited[start] = True
 
     for j in graph[start] : 
         distance[j[0]] = j[1]
